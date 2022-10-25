@@ -3,9 +3,9 @@ from django.db import models
 
 class Autor(models.Model):
 
-    nome = models.CharField(max_length=100)
+    nome = models.CharField(max_length=255, blank=True, null=True)
 
-    email = models.EmailField(max_length=250)
+    email = models.EmailField(blank=True, null=True)
 
     def __str__(self):
 

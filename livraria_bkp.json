@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$320000$CHrPX7SjaZRFRj3hmR97eX$QfHPjmIeLaRO9MTdmVJcgvxUoXUUmffjZJSSWpHUF6I=",
-    "last_login": "2022-10-20T17:32:00Z",
+    "last_login": "2022-10-25T19:19:28.902Z",
     "is_superuser": true,
     "username": "GuinneverC",
     "first_name": "",
