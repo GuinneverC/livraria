@@ -4,10 +4,10 @@ from django.utils.translation import gettext_lazy as _
 
 from core.models import Autor, Categoria, Editora, Livro, Usuario
 
-admin.site.register(Categoria)
-admin.site.register(Editora)
-admin.site.register(Autor)
-admin.site.register(Livro)
+# admin.site.register(Categoria)
+# admin.site.register(Editora)
+# admin.site.register(Autor)
+# admin.site.register(Livro)
 
 
 class UsuarioAdmin(UserAdmin):
@@ -45,6 +45,7 @@ class UsuarioAdmin(UserAdmin):
 admin.site.register(Usuario, UsuarioAdmin)
 
 
+@admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
     list_display = ("nome", "email")
     search_fields = ("nome", "email")
@@ -52,6 +53,7 @@ class AutorAdmin(admin.ModelAdmin):
     ordering = ("nome", "email")
 
 
+@admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
     list_display = ("descricao",)
     search_fields = ("descricao",)
@@ -59,6 +61,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     ordering = ("descricao",)
 
 
+@admin.register(Editora)
 class EditoraAdmin(admin.ModelAdmin):
     list_display = ("nome",)
     search_fields = ("nome",)
@@ -66,6 +69,7 @@ class EditoraAdmin(admin.ModelAdmin):
     ordering = ("nome",)
 
 
+@admin.register(Livro)
 class LivroAdmin(admin.ModelAdmin):
     list_display = ("titulo", "editora", "categoria")
     search_fields = ("titulo", "editora__nome", "categoria__descricao")

@@ -22,8 +22,8 @@ router.register(r'livro', LivroViewSet)
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls), 
-    path('', include(router.urls)),
+    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/media/", include(media_router.urls)),
@@ -42,4 +42,3 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_ENDPOINT, document_root=settings.MEDIA_ROOT)
-
